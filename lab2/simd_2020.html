@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>Glasgow_Deprivation_Map</title>
+    <link rel="stylesheet" href="./style.css">
+
+  </head>
+    
+  <body>
+  <html lang='en'>
+
+<head>
+  <meta charset='utf-8' />
+  <title>Your Title</title>
+  <meta name='viewport' content='width=device-width, initial-scale=1' />
+  <!-- Mapbox JS API !-->
+  <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v3.18.0/mapbox-gl.js'></script>
+  <!-- Mapbox CSS!-->
+  <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v3.18.0/mapbox-gl.css' rel='stylesheet' />
+  <!--   <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"> -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300..800&display=swap" rel="stylesheet">
+
+  <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v5.1.0/mapbox-gl-geocoder.min.js"></script>
+  <link href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v5.1.0/mapbox-gl-geocoder.css" rel="stylesheet" />
+
+</head>
+
+<body>
+  <div id='map'></div>
+  <div class="map-overlay" id="features">
+    <h2>Scottish Index of Multiple Deprivation (SIMD)</h2>
+    <div id="pd">
+      <p> Hover over a data zone!</p>
+    </div>
+  </div>
+
+  <div class="map-overlay" id="legend">
+    <div>Legend</div>
+    <div>&#8592; more deprived </div>
+  </div>
+
+</body>
+
+</html>
+    <script  src="./script.js"></script>
+
+  </body>
+  
+</html>
