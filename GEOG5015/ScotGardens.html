@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>Gardens_Scot_v0</title>
+    <link rel="stylesheet" href="./style.css">
+
+  </head>
+    
+  <body>
+  <html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Scottish Gardens</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <script src="https://api.tiles.mapbox.com/mapbox-gl-js/v3.18.0/mapbox-gl.js"></script>
+  
+  <link href="https://api.tiles.mapbox.com/mapbox-gl-js/v3.18.0/mapbox-gl.css" rel="stylesheet" />
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+  
+  <script src="https://unpkg.com/@turf/turf@6/turf.min.js"></script>
+
+<body>
+<div id="map"></div> 
+  <!-- Info box --> 
+  <div class="map-overlay" id="info"> 
+    <h2>Visit Historic Scottish Gardens</h2> <p>Enter your location below and then click on a garden to see more information and directions to the location.</p> 
+    <h2>Your Location</h2> 
+    <input id="user-location" type="text" placeholder="Enter your location in Scotland" style="width:95%; padding:3px;"> 
+    <button id="set-location">Set Location</button><button id="reset-location">Reset Location</button>
+  </div> 
+  
+  <!-- Garden directory --> 
+<button id="directory-toggle" class="directory-btn directory-heading">Directory</button>
+
+</div>
+  
+<!-- Direction Pop Up -->
+<div id="directions-modal" class="modal">
+    <div class="modal-content">
+        <span class="close-modal">&times;</span>
+        <h2 id="modal-title">Directions</h2>
+        <div id="directions-content"></div>
+    </div>
+</div>    
+    </div> 
+<!--Directory Panel -->
+<div id="directory-panel" class="sidebar-right">
+    <div class="sidebar-header">
+        <h2>Garden Directory</h2> 
+      <button id="close-directory">&times;</button>
+  </div> <!--header-->
+  <div class = "directory-controls">
+  <button id="expand-all" class="small-btn">Expand All</button>
+  <button id="collapse-all" class="small-btn">Collapse All</button>
+  </div> <!-- expand/collapse button -->
+
+    <div id="accordion-container">
+    </div>
+</div>
+  
+<div id="directions-widget" class="directions-widget" style="display: none;">
+    <div class="widget-header">
+        <span id="widget-title">Written Directions</span>
+        <button id="close-widget">&times;</button>
+    </div>
+    <div id="widget-directions-list" class="widget-content"></div>
+</div>
+
+</body>
+</html>
+    <script  src="./script.js"></script>
+
+  </body>
+  
+</html>

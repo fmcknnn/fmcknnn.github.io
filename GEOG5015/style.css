@@ -1,0 +1,290 @@
+/*---FONT CLASSES---*/
+.averia-serif-libre-light {
+  font-family: "Averia Serif Libre", serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.averia-serif-libre-regular {
+  font-family: "Averia Serif Libre", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.averia-serif-libre-bold {
+  font-family: "Averia Serif Libre", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.averia-serif-libre-light-italic {
+  font-family: "Averia Serif Libre", serif;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.averia-serif-libre-regular-italic {
+  font-family: "Averia Serif Libre", serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.averia-serif-libre-bold-italic {
+  font-family: "Averia Serif Libre", serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+
+/*---CLASSES---*/
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Averia Serif Libre", serif;
+  color: #556B2F;
+}
+
+#map {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+.map-overlay {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: #EBE5D5;
+  padding: 6px;
+  width: 260px;
+  border-radius: 2px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  font-family: "Averia Serif Libre", serif;
+}
+
+input[type="text"] { 
+  background-color: #EBE5D5; 
+  border: 1px solid #3B281B; 
+  padding: 3px; 
+  border-radius: 2px; 
+  font-family: "Averia Serif Libre", serif;
+}
+
+h1 {
+  font-family: "Averia Serif Libre", serif;
+  font-weight: 700;
+}
+
+h2 {
+  font-family: "Averia Serif Libre", serif;
+  font-weight: 700;
+}
+
+h3 {
+  font-family: "Averia Serif Libre", serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+p {
+  font-family: "Averia Serif Libre", serif;
+  font-weight: 300; /* light */
+}
+
+/* Garden Pop-Ups */ 
+/* Make popup smaller */
+.mapboxgl-popup {
+  max-width: 200px !important;
+}
+
+/* Invert popup colours */
+.mapboxgl-popup-content {
+  background-color: #556B2F !important;
+  color: #EBE5D5;
+  border: 2px solid #3B281B ;
+  font-family: "Averia Serif Libre", serif;
+  padding: 10px ;
+  border-radius: 4px ;
+}
+
+/* Popup title */
+.mapboxgl-popup-content h3 {
+  margin-top: 0;
+  color: #EBE5D5 !important;
+}
+
+/* Popup link */
+.mapboxgl-popup-content a {
+  color: #EBE5D5;
+  text-decoration: underline;
+}
+.mapboxgl-popup-tip {
+ color: #556B2F;
+}
+
+/*Directory*/
+.directory-heading {
+  font-family: "Averia Serif Libre", serif;
+  font-weight: 700;
+  font-size: 1.6rem;
+  color: #556B2F;
+}
+.small-btn { 
+  background: #EBE5D5; 
+  color: #556B2F; 
+  border: 1px solid #EBE5D5; 
+  padding: 3px 6px; 
+  font-size: 0.8rem; 
+  border-radius: 3px; 
+  cursor: pointer; 
+  font-family: "Averia Serif Libre", serif; 
+  font-weight: 400;
+  text-align: left;
+  text-decoration: underline
+}
+.la-header {
+  font-family: "Averia Serif Libre", serif;
+  font-weight: 800;
+  font-size: 1.1rem;
+  color: #556B2F;  
+  margin: 10px 0;
+  cursor: pointer;
+}
+.garden-item { 
+  margin-left: 20px;
+  padding-left: 5px;
+}
+
+/*---DIALGUE BOX LOCATIONS---*/
+/*1. Info box (top-left)*/
+#info { 
+  top: 10px; 
+  left: 10px; 
+} 
+/*1.1 Location Set and Reset Buttons*/
+#set-location, #reset-location {
+  border: none;
+  padding: 6px 10px; 
+  border-radius: 2px; 
+  font-family: "Averia Serif Libre", serif; 
+  font-weight: 300; 
+  cursor: pointer;
+  width: 48%;    
+  margin-top: 8px;
+  color: white;
+  transition: opacity 0.2s;
+}
+#set-location {
+  background-color: #556B2F;
+}
+#reset-location { 
+  background-color: #556B2F; 
+  margin-left: 2%;
+}
+#set-location:hover, 
+#reset-location:hover {
+  opacity: 0.7;
+}
+
+/* 2. Directory Btn*/
+.directory-btn { 
+  position: absolute; 
+  top: 20px; 
+  right: 20px; 
+  z-index: 10; 
+  background-color: #556B2F; 
+  color: white; 
+  padding: 10px 20px;
+  border: none; 
+  border-radius: 4px; 
+  cursor: pointer; 
+  font-family: "Averia Serif Libre", serif; 
+  font-weight: 300; 
+  transition: opacity 0.2s;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.3); 
+}
+
+/* 3. The Directory */
+.sidebar-right {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 350px;
+    height: 100%;
+    background: #EBE5D5;
+    z-index: 100;
+    transition: transform 0.3s ease-in-out;
+    transform: translateX(100%);
+    box-shadow: -2px 0 5px rgba(0,0,0,0.2);
+    display: flex;
+    flex-direction: column;
+    cursor: pointer; 
+}
+.sidebar-right.active {
+    transform: translateX(0);
+}
+.sidebar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3px;
+    background: #556B2F;
+    color: #EBE5D5;
+}
+#close-directory {
+    background: none;
+    border: none;
+    color: #EBE5D5;
+    font-size: 24px;
+    cursor: pointer;
+}
+#accordion-container {
+    overflow-y: auto;
+    flex-grow: 1;
+    padding: 10px;
+}
+
+/* 4. Written Directions*/
+.directions-widget {
+    position: fixed;         /* Keeps it floating over the map */
+    bottom: 30px;
+    left: 20px;
+    width: 320px;
+    max-height: 40vh;
+    background-color: #EBE5D5;
+    border: 2px solid #556B2F;
+    border-radius: 4px;
+    z-index: 2000;           /* Ensures it's above the map layer */
+    display: none;           /* JS toggles this to 'flex' */
+    flex-direction: column;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+}
+
+.widget-header {
+    background-color: #556B2F;
+    color: #EBE5D5;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: default;
+}
+
+.widget-content {
+    padding: 15px;
+    overflow-y: auto;        /* Adds scrollbar for long directions */
+    background-color: #EBE5D5;
+    color: #3B281B;
+    font-size: 0.9rem;
+}
+
+#close-widget {
+    background: none;
+    border: none;
+    color: #EBE5D5;
+    font-size: 20px;
+    cursor: pointer;
+    font-weight: bold;
+}
