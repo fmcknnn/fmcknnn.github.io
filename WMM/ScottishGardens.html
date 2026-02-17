@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>Gardens_Scot_v0</title>
+    <link rel="stylesheet" href="./style.css">
+
+  </head>
+    
+  <body>
+  <html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Scottish Gardens</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <script src="https://api.tiles.mapbox.com/mapbox-gl-js/v3.18.0/mapbox-gl.js"></script>
+  
+  <link href="https://api.tiles.mapbox.com/mapbox-gl-js/v3.18.0/mapbox-gl.css" rel="stylesheet" />
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+  
+  <script src="https://unpkg.com/@turf/turf@6/turf.min.js"></script>
+
+<body>
+<div id="map"></div> 
+<!-- Info Box -->
+<div class="map-overlay" id="info">
+  <h1>Visit Historic Scottish Gardens</h1>
+  <p>Enter your location in Scotland below and then click on a garden to see more information and directions to the location.</p>
+  <h2>Your Location</h2>
+  <input id="user-location" type="text" placeholder="Enter your location in Scotland" style="width:95%; padding:3px;">
+  <button id="set-location">Set Location</button>
+  <button id="reset-location">Reset Location</button>
+  
+  <!-- Collapsible Information Section -->
+  <div class="info-section">
+    <div class="info-toggle-header">
+      <h2>Data Information</h2>
+      <button id="info-arrow" class="info-arrow" aria-expanded="false">❯</button>
+    </div>
+    <div id="info-extra" class="info-extra collapsed">
+      <h3>Map created by:</h3>
+      <p>3148283m | 16 February 2026</p>
+      <h3>Data Source:</h3> <p> Scottish Government SpatialData.gov.scot, “Gardens and Designed Landscapes.” Last updated 19 June 2024. Downloaded 13 January 2026.<br>
+        https://data.gov.uk/dataset/bab10bd8-cc8b-4b4e-9eb7-d620a3ee27d9</p>
+      <p> Copilot assisted with debugging and organising code </p>
+    </div>
+  </div>
+</div>
+
+  <!-- Garden directory --> 
+<button id="directory-toggle" class="directory-btn">Directory</button>
+</div>
+  
+<!-- Direction Pop Up -->
+<div id="directions-modal" class="modal">
+    <div class="modal-content">
+        <span class="close-modal">&times;</span>
+        <h2 id="modal-title">Directions</h2>
+        <div id="directions-content"></div>
+    </div>
+</div>    
+    </div> 
+ 
+<!--Directory Panel -->
+<div id="directory-panel" class="sidebar-right">
+    <div class="sidebar-header">
+        <h2>Garden Directory</h2> 
+      <button id="close-directory">&times;</button>
+  </div>
+  <div class = "directory-controls">
+  <button id="expand-all" class="small-btn">Expand All</button>
+  <button id="collapse-all" class="small-btn">Collapse All</button>
+  </div>
+    <div id="accordion-container">
+    </div>
+</div>  
+<div id="directions-widget" class="directions-widget" style="display: none;">
+    <div class="widget-header">
+        <span id="widget-title">Written Directions</span>
+        <button id="close-widget">&times;</button>
+    </div>
+    <div id="widget-directions-list" class="widget-content"></div>
+</div>
+
+  <!-- Data Information Collapseable -->
+  <script>
+document.addEventListener("DOMContentLoaded", () => {
+  const arrow = document.getElementById("info-arrow");
+  const extra = document.getElementById("info-extra");
+  const header = document.querySelector(".info-toggle-header");
+  function toggleInfo() {
+    const expanded = extra.classList.toggle("expanded");
+    arrow.classList.toggle("expanded", expanded);
+    arrow.setAttribute("aria-expanded", expanded);
+  }
+  header.addEventListener("click", (e) => {
+    if (e.target !== arrow) toggleInfo();
+  });
+  arrow.addEventListener("click", toggleInfo);
+});
+</script>
+  
+</body>
+</html>
+    <script  src="./script.js"></script>
+
+  </body>
+  
+</html>
